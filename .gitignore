@@ -1,0 +1,8 @@
+Rlib/
+**/*.o
+**/*.dll
+**/.Rhistory
+**/.RData
+**/*_stopping_checkpoints/
+training_loss/InferenceTrace_code_1week.csv
+training_loss/InferenceTrace_conv_1week.csv

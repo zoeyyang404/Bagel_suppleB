@@ -1,0 +1,87 @@
+\begin{table}[H]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{0.85}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l|r|l|r|r|r|r|r|r|r|r|r|r}
+\hline
+ & & & \multicolumn{5}{c|}{Main prior} & \multicolumn{5}{c}{Diffuse prior} \\
+\cline{4-13}
+Example & $K$ & Method & Inv. & Delay & MAP dist. & Jaccard & HPD err & Inv. & Delay & MAP dist.  & Jaccard & HPD err \\
+\hline
+\multirow{10}{*}{\shortstack[l]{Mean \\ change \\ known \\variance}} & -- & Exact & 0.05 & 281 & 0 & 1.00 & 0.02 & 0.09 & 339 & 0 & 1.00 & 0.04 \\
+\cline{2-13}
+ & \multirow{3}{*}{50} & Bagel & 0.04 & 282 & \textbf{0} & \textbf{0.90} & \textbf{0.26} & 0.09 & 346 & \textbf{0} & \textbf{0.89} & \textbf{0.28} \\
+ &  & LP-M & 0.05 & 283 & 3 & 0.79 & 1.85 & 0.10 & 351 & 1 & 0.75 & 3.05 \\
+ &  & LP-P & 0.08 & 310 & \textbf{0} & 0.14 & 56.78 & 0.14 & 355 & \textbf{0} & 0.21 & 45.92 \\
+\cline{2-13}
+ & \multirow{3}{*}{100} & Bagel & 0.05 & 282 & \textbf{0} & \textbf{0.94} & \textbf{0.10} & 0.09 & 341 & \textbf{0} & \textbf{0.94} & \textbf{0.13} \\
+ &  & LP-M & 0.05 & 282 & 1 & 0.85 & 0.88 & 0.09 & 346 & \textbf{0} & 0.83 & 1.31 \\
+ &  & LP-P & 0.06 & 300 & \textbf{0} & 0.25 & 39.28 & 0.12 & 347 & \textbf{0} & 0.35 & 29.45 \\
+\cline{2-13}
+ & \multirow{3}{*}{200} & Bagel & 0.05 & 281 & \textbf{0} & \textbf{0.96} & \textbf{0.05} & 0.09 & 339 & \textbf{0} & \textbf{0.97} & \textbf{0.08} \\
+ &  & LP-M & 0.04 & 283 & \textbf{0} & 0.90 & 0.36 & 0.09 & 340 & \textbf{0} & 0.90 & 0.52 \\
+ &  & LP-P & 0.05 & 294 & \textbf{0} & 0.43 & 21.61 & 0.11 & 349 & \textbf{0} & 0.55 & 15.54 \\
+\hline
+\multirow{10}{*}{\shortstack[l]{Mean\\ change \\ unknown \\variance}} & -- & Exact & 0.04 & 282 & 0 & 1.00 & 0.02 & 0.09 & 336 & 0 & 1.00 & 0.03 \\
+\cline{2-13}
+ & \multirow{3}{*}{50} & Bagel & 0.04 & 282 & \textbf{0} & \textbf{0.90} & \textbf{0.27} & 0.09 & 336 & \textbf{0} & \textbf{0.89} & \textbf{0.28} \\
+ &  & LP-M & 0.05 & 279 & 3 & 0.79 & 1.83 & 0.09 & 337 & 1 & 0.75 & 3.05 \\
+ &  & LP-P & 0.08 & 306 & \textbf{0} & 0.14 & 56.68 & 0.12 & 346 & \textbf{0} & 0.20 & 46.00 \\
+\cline{2-13}
+ & \multirow{3}{*}{100} & Bagel & 0.04 & 283 & \textbf{0} & \textbf{0.94} & \textbf{0.10} & 0.09 & 334 & \textbf{0} & \textbf{0.94} & \textbf{0.13} \\
+ &  & LP-M & 0.04 & 282 & 1 & 0.85 & 0.87 & 0.09 & 339 & \textbf{0} & 0.83 & 1.29 \\
+ &  & LP-P & 0.06 & 294 & \textbf{0} & 0.25 & 39.10 & 0.11 & 339 & \textbf{0} & 0.35 & 29.66 \\
+\cline{2-13}
+ & \multirow{3}{*}{200} & Bagel & 0.04 & 282 & \textbf{0} & \textbf{0.96} & \textbf{0.05} & 0.09 & 336 & \textbf{0} & \textbf{0.97} & \textbf{0.08} \\
+ &  & LP-M & 0.04 & 283 & \textbf{0} & 0.90 & 0.38 & 0.09 & 336 & \textbf{0} & 0.90 & 0.53 \\
+ &  & LP-P & 0.05 & 287 & \textbf{0} & 0.42 & 22.01 & 0.10 & 335 & \textbf{0} & 0.54 & 15.56 \\
+\hline
+\multirow{10}{*}{\shortstack[l]{Continuous\\ slope \\ change\\ known \\ variance}} & -- & Exact & 0.02 & 421 & 0 & 1.00 & 0.01 & 0.02 & 505 & 0 & 1.00 & 0.02 \\
+\cline{2-13}
+ & \multirow{3}{*}{50} & Bagel & 0.02 & 420 & 8 & \textbf{0.95} & 0.30 & 0.02 & 506 & 4 & \textbf{0.95} & \textbf{0.32} \\
+ &  & LP-M & 0.02 & 422 & \textbf{6} & 0.95 & \textbf{0.18} & 0.02 & 505 & \textbf{3} & 0.94 & 0.35 \\
+ &  & LP-P & 0.04 & 502 & 127 & 0.04 & 92.23 & 0.05 & 559 & 68 & 0.06 & 88.47 \\
+\cline{2-13}
+ & \multirow{3}{*}{100} & Bagel & 0.02 & 420 & \textbf{3} & \textbf{0.98} & \textbf{0.07} & 0.02 & 505 & \textbf{2} & \textbf{0.98} & \textbf{0.10} \\
+ &  & LP-M & 0.02 & 421 & \textbf{3} & 0.97 & 0.12 & 0.02 & 505 & \textbf{2} & 0.97 & 0.23 \\
+ &  & LP-P & 0.03 & 451 & 52 & 0.10 & 83.55 & 0.04 & 540 & 6 & 0.14 & 74.11 \\
+\cline{2-13}
+ & \multirow{3}{*}{200} & Bagel & 0.02 & 420 & 2 & \textbf{0.99} & \textbf{0.03} & 0.02 & 505 & 1 & \textbf{0.99} & \textbf{0.09} \\
+ &  & LP-M & 0.02 & 420 & 1 & 0.98 & 0.12 & 0.02 & 505 & 1 & 0.98 & 0.18 \\
+ &  & LP-P & 0.03 & 438 & \textbf{0} & 0.22 & 59.94 & 0.03 & 524 & \textbf{0} & 0.30 & 49.68 \\
+\hline
+\multirow{10}{*}{\shortstack[l]{Discontinuous \\ slope\\ change \\ known \\ variance}} & -- & Exact & 0.02 & 346 & 0 & 1.00 & 0.02 & 0.06 & 430 & 0 & 1.00 & 0.02 \\
+\cline{2-13}
+ & \multirow{3}{*}{50} & Bagel & 0.02 & 348 & \textbf{0} & \textbf{0.92} & \textbf{0.48} & 0.06 & 439 & \textbf{0} & \textbf{0.89} & \textbf{0.58} \\
+ &  & LP-M & 0.02 & 351 & \textbf{0} & 0.87 & 1.62 & 0.07 & 442 & 2 & 0.79 & 2.99 \\
+ &  & LP-P & 0.09 & 409 & \textbf{0} & 0.04 & 83.02 & 0.13 & 484 & \textbf{0} & 0.07 & 75.50 \\
+\cline{2-13}
+ & \multirow{3}{*}{100} & Bagel & 0.02 & 348 & \textbf{0} & \textbf{0.95} & \textbf{0.14} & 0.06 & 431 & \textbf{0} & \textbf{0.93} & \textbf{0.22} \\
+ &  & LP-M & 0.02 & 348 & \textbf{0} & 0.91 & 0.69 & 0.06 & 435 & \textbf{0} & 0.86 & 1.35 \\
+ &  & LP-P & 0.05 & 393 & \textbf{0} & 0.09 & 73.89 & 0.11 & 470 & \textbf{0} & 0.14 & 64.31 \\
+\cline{2-13}
+ & \multirow{3}{*}{200} & Bagel & 0.02 & 346 & \textbf{0} & \textbf{0.97} & \textbf{0.06} & 0.06 & 431 & \textbf{0} & \textbf{0.96} & \textbf{0.10} \\
+ &  & LP-M & 0.02 & 348 & \textbf{0} & 0.94 & 0.30 & 0.06 & 431 & \textbf{0} & 0.91 & 0.58 \\
+ &  & LP-P & 0.03 & 383 & \textbf{0} & 0.19 & 59.68 & 0.09 & 455 & \textbf{0} & 0.28 & 48.36 \\
+\hline
+\multirow{10}{*}{\shortstack[l]{Seasonal \\ change \\ known \\ variance}} & -- & Exact & 0.08 & 329 & 0 & 1.00 & 0.02 & 0.15 & 383 & 0 & 1.00 & 0.04 \\
+\cline{2-13}
+ & \multirow{3}{*}{50} & Bagel & 0.08 & 332 & 1 & \textbf{0.89} & \textbf{0.41} & 0.15 & 385 & \textbf{0} & \textbf{0.88} & \textbf{0.43} \\
+ &  & LP-M & 0.08 & 335 & 3 & 0.80 & 1.47 & 0.15 & 390 & \textbf{0} & 0.77 & 2.29 \\
+ &  & LP-P & 0.13 & 359 & \textbf{0} & 0.12 & 63.97 & 0.21 & 415 & \textbf{0} & 0.19 & 52.50 \\
+\cline{2-13}
+ & \multirow{3}{*}{100} & Bagel & 0.08 & 330 & \textbf{0} & \textbf{0.93} & \textbf{0.14} & 0.15 & 385 & \textbf{0} & \textbf{0.93} & \textbf{0.18} \\
+ &  & LP-M & 0.08 & 329 & 1 & 0.87 & 0.66 & 0.15 & 386 & \textbf{0} & 0.85 & 0.96 \\
+ &  & LP-P & 0.11 & 351 & \textbf{0} & 0.23 & 46.27 & 0.18 & 400 & \textbf{0} & 0.33 & 33.75 \\
+\cline{2-13}
+ & \multirow{3}{*}{200} & Bagel & 0.08 & 329 & \textbf{0} & \textbf{0.96} & \textbf{0.06} & 0.15 & 385 & \textbf{0} & \textbf{0.96} & \textbf{0.09} \\
+ &  & LP-M & 0.08 & 330 & \textbf{0} & 0.91 & 0.32 & 0.15 & 385 & \textbf{0} & 0.92 & 0.39 \\
+ &  & LP-P & 0.10 & 343 & \textbf{0} & 0.41 & 26.80 & 0.16 & 392 & \textbf{0} & 0.54 & 17.03 \\
+\hline
+\end{tabular}
+}
+\caption{Online detection results under the main and diffuse priors over 500 replications. Inv. is the proportion of false alarms and detection failures. MAP dist. is the median absolute distance between the approximate and exact posterior modes, both evaluated at the method's stopping time. HPD err is the mean absolute deviation of the exact posterior mass in the approximate HPD set from 0.95, expressed in percentage points.}
+\label{tab:example2}
+\end{table}

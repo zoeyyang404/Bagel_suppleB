@@ -1,0 +1,30 @@
+\begin{table}[]
+\centering
+\small
+\scalebox{0.8}{%
+\begin{tabular}{l|l|r@{\hspace{8pt}}r@{\hspace{8pt}}r|r@{\hspace{8pt}}r@{\hspace{8pt}}r|r@{\hspace{8pt}}r@{\hspace{8pt}}r|r@{\hspace{8pt}}r@{\hspace{8pt}}r}
+\hline
+& & \multicolumn{6}{c|}{$\mathrm{TV}_{\mathrm{full}}$} & \multicolumn{6}{c}{$W_{1,\mathrm{change}}$} \\\cline{3-14}
+& & \multicolumn{3}{c|}{Main} & \multicolumn{3}{c|}{Diffuse} & \multicolumn{3}{c|}{Main} & \multicolumn{3}{c}{Diffuse} \\\cline{3-14}
+Example & $M$ & Bagel & LP-M & LP-P & Bagel & LP-M & LP-P & Bagel & LP-M & LP-P & Bagel & LP-M & LP-P \\
+\hline
+\multirow{3}{*}{\shortstack[l]{Mean change \\ known variance}} & 50 & \textbf{0.032} & 0.072 & 0.218 & \textbf{0.028} & 0.091 & 0.098 & \textbf{2.27} & 5.88 & 103.85 & \textbf{1.48} & 4.27 & 34.65 \\
+ & 100 & \textbf{0.015} & 0.042 & 0.130 & \textbf{0.008} & 0.039 & 0.049 & \textbf{1.10} & 2.97 & 78.76 & \textbf{0.59} & 2.14 & 23.59 \\
+ & 200 & \textbf{0.005} & 0.016 & 0.060 & \textbf{0.002} & 0.010 & 0.018 & \textbf{0.43} & 1.36 & 51.28 & \textbf{0.18} & 0.88 & 14.77 \\ \hline
+\multirow{3}{*}{\shortstack[l]{Mean change \\ unknown \\variance}} & 50 & \textbf{0.032} & 0.071 & 0.204 & \textbf{0.025} & 0.087 & 0.088 & \textbf{2.29} & 6.21 & 108.85 & \textbf{1.67} & 4.87 & 45.27 \\
+ & 100 & \textbf{0.014} & 0.040 & 0.121 & \textbf{0.008} & 0.037 & 0.044 & \textbf{1.08} & 3.06 & 82.43 & \textbf{0.62} & 2.45 & 31.65 \\
+ & 200 & \textbf{0.004} & 0.015 & 0.055 & \textbf{0.002} & 0.009 & 0.017 & \textbf{0.44} & 1.44 & 55.55 & \textbf{0.20} & 0.95 & 19.64 \\ \hline
+\multirow{3}{*}{\shortstack[l]{Continuous slope \\change  known \\variance}} & 50 & \textbf{0.001} & 0.001 & 0.102 & \textbf{0.007} & 0.007 & 0.191 & \textbf{1.13} & 1.47 & 431.77 & \textbf{4.36} & 5.01 & 364.85 \\
+ & 100 & \textbf{0.000} & 0.001 & 0.096 & \textbf{0.002} & 0.005 & 0.169 & \textbf{0.48} & 1.38 & 379.88 & \textbf{1.76} & 3.69 & 305.57 \\
+ & 200 & \textbf{0.000} & 0.001 & 0.083 & \textbf{0.001} & 0.004 & 0.126 & \textbf{0.20} & 1.42 & 300.92 & \textbf{0.67} & 3.47 & 225.18 \\ \hline
+\multirow{3}{*}{\shortstack[l]{Discontinuous \\slope change \\known variance}} & 50 & \textbf{0.025} & 0.054 & 0.149 & \textbf{0.036} & 0.096 & 0.104 & \textbf{2.91} & 7.59 & 106.44 & \textbf{2.72} & 6.60 & 33.86 \\
+ & 100 & \textbf{0.012} & 0.031 & 0.092 & \textbf{0.013} & 0.047 & 0.065 & \textbf{1.52} & 3.59 & 82.21 & \textbf{1.19} & 3.70 & 24.58 \\
+ & 200 & \textbf{0.004} & 0.013 & 0.048 & \textbf{0.003} & 0.014 & 0.036 & \textbf{0.62} & 1.79 & 54.56 & \textbf{0.40} & 1.77 & 17.31 \\ \hline
+\multirow{3}{*}{\shortstack[l]{Seasonal change \\ known variance}} & 50 & \textbf{0.039} & 0.071 & 0.262 & \textbf{0.020} & 0.042 & 0.064 & \textbf{2.57} & 5.82 & 74.20 & \textbf{0.74} & 1.67 & 9.37 \\
+ & 100 & \textbf{0.017} & 0.038 & 0.152 & \textbf{0.005} & 0.014 & 0.028 & \textbf{1.06} & 2.71 & 56.32 & \textbf{0.25} & 0.63 & 5.48 \\
+ & 200 & \textbf{0.005} & 0.013 & 0.066 & \textbf{0.001} & 0.004 & 0.010 & \textbf{0.40} & 1.25 & 36.12 & \textbf{0.08} & 0.27 & 3.19 \\ \hline
+\end{tabular}
+}
+\caption{Simulation on a fixed horizon $T=1000$ with $500$ replicates. W1 stands for the averaged Wasserstein distance and TV is for the averaged total variation distance. The lowest value in each block is in bold.}
+\label{tab:calibration}
+\end{table}
