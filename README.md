@@ -1,6 +1,6 @@
 # Supplement B: Code and Data
 
-This supplement provides a local version of the Bagel software used in the paper, together with the code that can reproduce the motivating example, simulation studies, and Azure LLM inference traces analysis. We additionally provide parameter settings, calibrated thresholds, and numerical results, so the results can be reproduced directly from saved outputs to avoid heavy computation. Parralleliztation is implemented in every script, so changing  `N_cores` to your hardware can reduce the running time and avoid crashes.
+This supplement provides a local version of the Bagel software used in the paper, together with the code that can reproduce the motivating example, simulation studies, and Azure LLM inference traces analysis. We additionally provide parameter settings, calibrated thresholds, and numerical results, so the results can be reproduced directly from saved outputs to avoid heavy computation. Parralleliztation is implemented in every script, so changing  `N_cores` based on the hardware can reduce the running time and avoid crashes.
 
 ## Installation
 
@@ -89,7 +89,7 @@ The generated running speed will not be exactly the same as the paper shows as t
 
 ## Azure LLM inference trace data and analysis
 
-The results are shown in the real data example in main paper. Azure LLM trace data is downloaded from  Jovan Stojkovic, Chaojie Zhang, Íñigo Goiri, Josep Torrellas, Esha Choukse. ["DynamoLLM: Designing LLM Inference Clusters for Performance and Energy Efficiency", in Proceedings of the International Symposium on High-Performance Computer Architecture (HPCA 2025). IEEE, Las Vegas, USA, 2025](https://ieeexplore.ieee.org/abstract/document/10946802/).
+The results are shown in the real data example in main paper. Azure LLM trace data is downloaded from Jovan Stojkovic, Chaojie Zhang, Íñigo Goiri, Josep Torrellas, Esha Choukse. ["DynamoLLM: Designing LLM Inference Clusters for Performance and Energy Efficiency", in Proceedings of the International Symposium on High-Performance Computer Architecture (HPCA 2025). IEEE, Las Vegas, USA, 2025](https://ieeexplore.ieee.org/abstract/document/10946802/).
 
 For more details and access to the data, see https://github.com/Azure/AzurePublicDataset/blob/master/AzureLLMInferenceDataset2024.md
 
