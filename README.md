@@ -1,6 +1,6 @@
 # Supplement B: Code and Data
 
-This supplement provides a local version of the Bagel software used in the paper, together with the code that can reproduce the motivating example, simulation studies, and analysis of Azure LLM inference traces. We additionally provide parameter settings, calibrated thresholds, and numerical results, so the results can be reproduced directly from saved outputs to avoid heavy computation.
+This supplement provides a local version of the Bagel software used in the paper, together with the code that can reproduce the motivating example, simulation studies, and Azure LLM inference traces analysis. We additionally provide parameter settings, calibrated thresholds, and numerical results, so the results can be reproduced directly from saved outputs to avoid heavy computation. Parralleliztation is implemented in every script, so changing  `N_cores` to your hardware can reduce the running time and avoid crashes.
 
 ## Installation
 
@@ -10,7 +10,6 @@ install.packages(c("Rcpp", "RcppEigen", "BH", "dplyr", "ggplot2", "ggrepel", "pa
 install.packages("bagel/bagelR", repos = NULL, type = "source")
 ```
 The updated Bagel package can be installed by
-
 ```r
 if(system.file(package = "bagelR") != "")
     {
@@ -21,16 +20,16 @@ install_github("grosed/bagel/bagelR",force=TRUE)
 ```
 To make sure obtain consistent results as the paper, please use the local version as it is frozen here.
 
-
 ## Motivating example
 The resulting figures are shown in the Figure 2 and Figure 3 in main paper, they can be generated as:
 ```r
 source("simulation/motivation_example.R")
 ```
+
 ## Generating the simulation results
+
 ### Reproducing the table about accuracy of the posterior approximation
 The results are shown in the Table 1 in main paper. We consider the following scenarios.
-
 | Scenario | Script in `simulation/` |
 | --- | --- |
 | Mean change with known variance | `example1_varknown_calibration.R` |
@@ -76,6 +75,7 @@ After all five scenarios have completed, Table 3 in the main paper and Table 1 i
 ```r
 source("simulation/example2_summary.R")
 ```
+Note: this isimulation is comvcomputationally heavy, we suggest use the existing threshold to reproduce the results.
 
 ## Empirical runtime
 
@@ -84,13 +84,20 @@ The resulting figures are shown in the Figure 4 in main paper and Figure 2 in su
 ```r
 source("simulation/speed.R")
 ```
-The generated running speed will not be exactly the same as the paper shows as the runtime depends on the hardware of computers. However, the main shape should be the same.
+
+The generated running speed will not be exactly the same as the paper shows as the runtime depends on the hardware of computers. However, the main trend should be the same.
 
 ## Azure LLM inference trace data and analysis
 
-The results are shown in the real data example in main paper. Script `training_loss/bin_tokens.py` aggregates the Azure inference trace into five-minute intervals. It requires Python, pandas, and fetch the source data from the Github repo. The processed observations are saved and provided in `training_loss/InferenceTrace_code_5min.csv`.
+The results are shown in the real data example in main paper. Azure LLM trace data is downloaded from  Jovan Stojkovic, Chaojie Zhang, Íñigo Goiri, Josep Torrellas, Esha Choukse. ["DynamoLLM: Designing LLM Inference Clusters for Performance and Energy Efficiency", in Proceedings of the International Symposium on High-Performance Computer Architecture (HPCA 2025). IEEE, Las Vegas, USA, 2025](https://ieeexplore.ieee.org/abstract/document/10946802/).
 
-The parameter settings used in the paper are also provided in `training_loss/code_gen_slope_paper_parameters.txt`. To use these saved parameters instead of tuning threshold from beginning, set `use_saved_parameters <- TRUE` within the script. To reproduce the results in paper, execute:
+For more details and access to the data, see https://github.com/Azure/AzurePublicDataset/blob/master/AzureLLMInferenceDataset2024.md
+
+The results are shown in the real data example section in main paper. Script `training_loss/bin_tokens.py` aggregates the Azure inference trace into five-minute intervals. It requires Python, pandas, to fetch the source data from the Github repo. The processed observations are saved and provided in `training_loss/InferenceTrace_code_5min.csv`.
+
+The parameter settings used in the paper are also provided in `training_loss/code_gen_slope_paper_parameters.txt`. To use these saved parameters instead of tuning threshold from beginning, set `use_saved_parameters <- TRUE` within the script. 
+
+To reproduce the results in paper, execute:
 ```r
 source("training_loss/code_gen_slope_dynamic50.R")
 ```
